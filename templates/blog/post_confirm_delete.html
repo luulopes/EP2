@@ -1,7 +1,13 @@
-<h1>Excluir Notícia</h1>
-<p>Tem certeza que deseja excluir o post "{{ post.title }}"?</p>
-<form method="POST">
-    {% csrf_token %}
-    <button type="submit">Sim</button>
-</form>
-<a href="{% url 'post-list' %}">Não</a>
+{% extends 'blog/base.html' %}
+
+{% block title %}Excluir Post{% endblock %}
+
+{% block content %}
+    <h2>Excluir Notícia</h2>
+    <p>Tem certeza de que deseja excluir a Notícia? "{{ post.title }}"?</p>
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit">Sim</button>
+    </form>
+    <a href="{% url 'post-list' %}">Não</a>
+{% endblock %}
