@@ -1,0 +1,9 @@
+<h1>Posts</h1>
+<ul>
+    {% for post in posts %}
+        <li>
+            <a href="{% url 'post-detail' post.id %}">{{ post.title }}</a>
+        </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'post-create' %}">Adicionar Nova Notícia</a>
