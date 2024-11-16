@@ -128,3 +128,6 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 
 MEDIA_URL = '/media/'  # URL para acessar arquivos de mídia
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # Diretório de armazenamento
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'

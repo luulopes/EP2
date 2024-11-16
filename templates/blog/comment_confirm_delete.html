@@ -1,0 +1,23 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <h2>Excluir Comentário</h2>
+    <p>Tem certeza de que deseja excluir este comentário?</p>
+    <p>
+        <strong>Autor:</strong> 
+        {% if object.author %}
+            {{ object.author }}
+        {% else %}
+            Anônimo
+        {% endif %}
+    </p>
+    <p><strong>Conteúdo:</strong> {{ object.content }}</p>
+
+    <div class="button-container">
+        <form method="POST" style="display: inline;">
+            {% csrf_token %}
+            <button type="submit" class="button">Sim, Excluir</button>
+        </form>
+        <a href="{% url 'post-detail' pk=object.post.id %}" class="button">Cancelar</a>
+    </div>
+{% endblock %}
