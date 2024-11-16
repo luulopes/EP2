@@ -31,4 +31,12 @@
         <textarea id="comment-content" name="content" placeholder="Escreva seu comentário..."></textarea>
         <button type="submit" class="button">Postar</button>
     </form>
+
+    <h3>Categorias:</h3>
+    <ul>
+        {% for category in post.categories.all %}
+            <li><a href="{% url 'category-detail' category.id %}">{{ category.name }}</a></li>
+        {% endfor %}
+    </ul>
+    
 {% endblock %}

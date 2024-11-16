@@ -1,8 +1,9 @@
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
-from .models import Post, Comment
+from .models import Post, Comment, Category
 from django.shortcuts import redirect
 from django.urls import reverse
+from django.shortcuts import get_object_or_404
 
 class PostListView(ListView):
     model = Post
@@ -59,5 +60,24 @@ class CommentDeleteView(DeleteView):
 
     def get_success_url(self):
         """Redireciona para a página do post associado após exclusão do comentário"""
-        post_id = self.object.post.id  # Obtém o ID do post relacionado
+        post_id = self.object.post.id  
         return reverse('post-detail', kwargs={'pk': post_id})
+    
+class CategoryListView(ListView):
+    model = Category
+    template_name = 'blog/category_list.html'
+    context_object_name = 'categories'
+
+class CategoryDetailView(ListView):
+    model = Post
+    template_name = 'blog/category_detail.html'
+    context_object_name = 'posts'
+
+    def get_queryset(self):
+        self.category = get_object_or_404(Category, pk=self.kwargs['pk'])
+        return self.category.posts.all()
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['category'] = self.category
+        return context
