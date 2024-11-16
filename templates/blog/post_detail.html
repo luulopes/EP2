@@ -10,6 +10,11 @@
     <h2>{{ post.title }}</h2>
     <p>{{ post.content|safe }}</p>
     <p>{{ post.date_posted|date:"d M Y H:i" }}</p>
+    {% if post.image %}
+    <div class="featured-image">
+        <img src="{{ post.image.url }}" alt="{{ post.title }}">
+    </div>
+    {% endif %}
 
     <h3>Comentários</h3>
     <ul>
