@@ -30,9 +30,9 @@ ALLOWED_HOSTS = ['ep2-wnfx.onrender.com',
                  '127.0.0.1',
                  'localhost',]
 
-CORS_ALLOWED_ORIGINS = [f'ep2-wnfx.onrender.com:{os.environ("PORT")}',
-                 f'127.0.0.1:{os.environ("PORT")}',
-                 f'localhost:{os.environ("PORT")}',
+CORS_ALLOWED_ORIGINS = [f'ep2-wnfx.onrender.com:{os.environ["PORT"]}',
+                 f'127.0.0.1:{os.environ["PORT"]}',
+                 f'localhost:{os.environ["PORT"]}',
 ]
 
 # Application definition
