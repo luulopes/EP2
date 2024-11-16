@@ -13,6 +13,10 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 import os
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://ep2-wnfx.onrender.com'
+]
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -36,6 +40,8 @@ CORS_ALLOWED_ORIGINS = [f'ep2-wnfx.onrender.com:{os.environ["PORT"]}',
 ]
 
 # Application definition
+
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
