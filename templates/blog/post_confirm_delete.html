@@ -5,9 +5,18 @@
 {% block content %}
     <h2>Excluir Notícia</h2>
     <p>Tem certeza de que deseja excluir a Notícia? "{{ post.title }}"?</p>
-    <form method="POST">
-        {% csrf_token %}
-        <button type="submit">Sim</button>
-    </form>
-    <a href="{% url 'post-list' %}">Não</a>
+    <div class="button-container">
+        <button type="submit" class="button">Sim</button>
+        <a href="{% url 'post-list' %}" class="button">Não</a>
+    </div>
 {% endblock %}
+
+
+
+    <!-- <div class="button-container">
+        <form method="POST" style="display: inline;">
+            {% csrf_token %}
+            <button type="submit" class="button">Sim</button>
+        </form>
+        <a href="{% url 'post-list' %}" class="button">Não</a>
+    </div> -->

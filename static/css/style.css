@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Pacifico&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Geist Mono', sans-serif; 
+    background-color: #efd5c4; 
+    color: #A1A1A1; 
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+header {
+    background-color: #efd5c4; 
+    padding: 1em;
+    text-align: center;
+}
+
+header h1 a {
+    color: #A1A1A1;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+nav ul li a {
+    color: #A1A1A1;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #C8CBC1; 
+}
+
+main {
+    padding: 2em;
+    max-width: 800px;
+    margin: auto;
+}
+
+h2 {
+    color: #A1A1A1; 
+    margin-bottom: 1em;
+}
+
+footer {
+    background-color: #efd5c4; 
+    color: #A1A1A1;
+    text-align: center;
+    padding: 1em;
+    margin-top: 2em;
+}
+
+/* Botões */
+.button-container {
+    display: flex;
+    gap: 1em; 
+    margin-top: 1em; 
+}
+
+.button {
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+    color: #A1A1A1; 
+    border: none; 
+    padding: 0.5em 1em; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    text-decoration: none; 
+    font-size: 1em; 
+    font-weight: bold; 
+    box-shadow: 2px 2px 5px #A1A1A1; 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+    background-color: #C8CBC1; 
+    box-shadow: 4px 4px 10px #A1A1A1; 
+}
+
+/* Força o mesmo estilo para <button> */
+button.button {
+    all: unset; 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #A1A1A1;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button.button:hover {
+    background-color: #C8CBC1;
+    box-shadow: 4px 4px 10px #A1A1A1;
+}
+
+/* Links */
+a {
+    color: #A1A1A1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #E6B0AA; /* Rosa claro */
+}
+
+/* Estilo das listas de posts */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 1em;
+    border-bottom: 1px solid #C8CBC1;
+}
+
+ul li a {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #A1A1A1;
+}
+
+ul li p {
+    font-size: 0.9em;
+    color: #A1A1A1;
+}
+
+/* Formulários */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+form input, form textarea {
+    background-color: #efd5c4;
+    padding: 0.5em;
+    border: 1.5px solid #A1A1A1;
+    border-radius: 5px;
+}
+
+form button {
+    align-self: flex-start;
+}
+
+/* Estilo da Imagem de Destaque do Post */
+.featured-image {
+    margin: 1em 0;
+    text-align: center;
+}
+
+.featured-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+}
