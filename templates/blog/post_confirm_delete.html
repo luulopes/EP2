@@ -6,10 +6,11 @@
     <h2>Excluir Notícia</h2>
     <p>Tem certeza de que deseja excluir a Notícia? "{{ post.title }}"?</p>
     <div class="button-container">
-        <button type="submit" class="button">Sim</button>
+        <form method="POST" style="display: inline;">
+            {% csrf_token %}
+            <button type="submit" class="button" >Sim</button>
+        </form>
         <a href="{% url 'post-list' %}" class="button">Não</a>
     </div>
 {% endblock %}
-
-
 
