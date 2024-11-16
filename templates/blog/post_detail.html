@@ -16,9 +16,8 @@
     </div>
     {% endif %}
 
-    {% if user == post.author or user.is_staff %}
     <a href="{% url 'post-delete' post.id %}" class="button-danger">Excluir Post</a>
-    {% endif %}
+
 
     <h3>Comentários</h3>
     <ul>
